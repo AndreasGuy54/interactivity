@@ -1,7 +1,6 @@
 'use strict';
 
 const secretNumber = Math.floor(Math.random() * 20) + 1;
-document.querySelector('.number').textContent = secretNumber;
 
 let score = 20;
 
@@ -16,7 +15,8 @@ document.querySelector('.check').addEventListener('click', () => {
   else if (guess === secretNumber) {
     document.querySelector('.message').textContent = '🎉 Correct Number!';
 
-    //change styles when player wins
+    //change styles and show secretNumber when player wins
+    document.querySelector('.number').textContent = secretNumber;
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
   }
